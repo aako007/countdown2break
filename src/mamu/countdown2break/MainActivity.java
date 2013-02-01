@@ -13,6 +13,8 @@ public class MainActivity extends Activity {
 	TextView tv2;
 	ProgressBar p1;
 	
+	// test comment
+	
 	private long getMillisOfLessonsEndFromLessonNumber(int lessonnumber)
 	{
 		return getMidnightMillis() + millis[lessonnumber - 1];
