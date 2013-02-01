@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">countdown2break</string>
+    <string name="time">"Zeit"</string>
+    <string name="quote">Bildung kommt von Bildschirm und nicht von Buch, sonst hieße es ja Buchung.</string>
+    <string name="quoteauthor">Dieter Hildebrandt</string>
+    <string name="menu_settings">Settings</string>
+    
+    
+
+</resources>
