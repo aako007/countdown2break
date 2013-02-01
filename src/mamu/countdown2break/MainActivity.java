@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	int[] millis = {27300000, 30300000, 33900000, 36900000, 40800000, 43800000, 46800000, 49500000, 51900000};
+	int[] millis = {27300000, 30300000, 33900000, 36900000, 40800000, 43800000, 46800000, 49500000, 52200000};
 	TextView tv1;
 	TextView tv2;
 	
