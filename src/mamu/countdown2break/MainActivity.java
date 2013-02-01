@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	int[] millis = {27300000, 30300000, 33900000, 36900000, 40800000, 43800000, 46800000, 49500000, 52200000};
+	int[] millis = {27300000, 30300000, 33900000, 36900000, 40800000, 43800000, 46800000, 49500000, 52200000, 113700000};
 	TextView tv1;
 	TextView tv2;
 	
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 		{
 			i++;
 		}
-		tv1.setText(""+i);
+		tv1.setText(""+(i % 9));
 		return getMillisOfLessonsEndFromLessonNumber(i);
 	}
 	
@@ -67,16 +67,16 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		tv1 = (TextView) findViewById(R.id.textView1);
 		tv2 = (TextView) findViewById(R.id.textView2);
-		System.out.println(getMidnightMillis());
-		System.out.println(System.currentTimeMillis());
-		System.out.println(getMillisOfLessonsEndFromLessonNumber(1));
-		System.out.println(getNextLessonFinishedMillis());
+//		System.out.println(getMidnightMillis());
+//		System.out.println(System.currentTimeMillis());
+//		System.out.println(getMillisOfLessonsEndFromLessonNumber(1));
+//		System.out.println(getNextLessonFinishedMillis());
 		
 		 new CountDownTimer(getNextLessonFinishedMillis() - System.currentTimeMillis(), 998) {
 			 
 		     public void onTick(long millisUntilFinished) {
 		         setTime(millisUntilFinished);
-		         System.out.println("hans");
+//		         System.out.println("hans");
 		     }
 
 		     public void onFinish() {
