@@ -3,11 +3,12 @@ package mamu.countdown2break;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
 	int[] millis = {27300000, 30300000, 33900000, 36900000, 40800000, 43800000, 46800000, 49500000, 52200000, 113700000};
 	TextView tv1;
 	TextView tv2;
@@ -68,7 +69,12 @@ public class MainActivity extends Activity {
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if(getResources().getConfiguration().orientation == 2) {
+			requestWindowFeature(Window.FEATURE_NO_TITLE);
+		    this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		}
 		setContentView(R.layout.activity_main);
+		
 		tv1 = (TextView) findViewById(R.id.textView1);
 		tv2 = (TextView) findViewById(R.id.textView2);
 		p1 = (ProgressBar) findViewById(R.id.progressBar1);
