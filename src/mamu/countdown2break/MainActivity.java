@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		tv1 = (TextView) findViewById(R.id.textView1);
 		tv2 = (TextView) findViewById(R.id.textView2);
-		p1 = (ProgressBar) findViewById(R.id.linearlayout1);
+		p1 = (ProgressBar) findViewById(R.id.progressBar1);
 		p1.setMax(2700000);
 //		System.out.println(getMidnightMillis());
 //		System.out.println(System.currentTimeMillis());
