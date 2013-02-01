@@ -82,11 +82,11 @@ public class MainActivity extends Activity {
 			 
 		     public void onTick(long millisUntilFinished) {
 		         setTime(millisUntilFinished);
-//		         if (millisUntilFinished <= 2700000)
-//		         {
-//		        	 int temp = (int) millisUntilFinished;
-//		        	 p1.setProgress(temp);
-//		         }
+		         if (millisUntilFinished <= 2700000)
+		         {
+		        	 int temp = (int) millisUntilFinished;
+		        	 p1.setProgress(temp);
+		         }
 		         
 //		         System.out.println("hans");
 		     }
