@@ -60,4 +60,13 @@
         android:textStyle="italic"
         android:typeface="monospace" />
 
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearlayout1"
+        android:layout_alignRight="@+id/linearlayout1"
+        android:layout_below="@+id/linearlayout1" />
+
 </RelativeLayout>

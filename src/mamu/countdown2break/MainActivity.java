@@ -3,6 +3,7 @@ package mamu.countdown2break;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -10,6 +11,7 @@ public class MainActivity extends Activity {
 	int[] millis = {27300000, 30300000, 33900000, 36900000, 40800000, 43800000, 46800000, 49500000, 52200000, 113700000};
 	TextView tv1;
 	TextView tv2;
+	ProgressBar p1;
 	
 	private long getMillisOfLessonsEndFromLessonNumber(int lessonnumber)
 	{
@@ -67,6 +69,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		tv1 = (TextView) findViewById(R.id.textView1);
 		tv2 = (TextView) findViewById(R.id.textView2);
+		p1 = (ProgressBar) findViewById(R.id.linearlayout1);
+		p1.setMax(2700000);
 //		System.out.println(getMidnightMillis());
 //		System.out.println(System.currentTimeMillis());
 //		System.out.println(getMillisOfLessonsEndFromLessonNumber(1));
@@ -76,6 +80,12 @@ public class MainActivity extends Activity {
 			 
 		     public void onTick(long millisUntilFinished) {
 		         setTime(millisUntilFinished);
+//		         if (millisUntilFinished <= 2700000)
+//		         {
+//		        	 int temp = (int) millisUntilFinished;
+//		        	 p1.setProgress(temp);
+//		         }
+		         
 //		         System.out.println("hans");
 		     }
 
