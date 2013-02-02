@@ -99,6 +99,7 @@ public class MainActivity extends Activity {
 
 		     public void onFinish() {
 		         tv2.setText("Happy Pause ;-)");
+		         p1.setProgress(0);
 		     }
 		  }.start();
 	}
