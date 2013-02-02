@@ -90,7 +90,7 @@ public class MainActivity extends Activity {
 		         setTime(millisUntilFinished);
 		         if (millisUntilFinished <= 2700000)
 		         {
-		        	 int temp = (int) millisUntilFinished;
+		        	 int temp = (int) (2700000 - millisUntilFinished);
 		        	 p1.setProgress(temp);
 		         }
 		         
