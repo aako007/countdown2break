@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 	
 	private long getMillisOfLessonsEndFromLessonNumber(int lessonnumber)
 	{
-		return getMidnightMillis() + millis[lessonnumber - 1];
+		return getMidnightMillis() + (millis[lessonnumber - 1]) - 56000;
 	}
 		
 	private long getMidnightMillis()
