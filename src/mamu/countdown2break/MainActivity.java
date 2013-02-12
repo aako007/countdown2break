@@ -52,7 +52,8 @@ public class MainActivity extends Activity {
 		muf = muf - m;
 		muf = muf / 60;
 		h = (int) muf % 24;
-		tv2.setText(int2String(h)+":"+int2String(m)+":"+int2String(s));
+		if(h == 0 && m == 13 && s == 37) tv2.setText("1337");
+		else tv2.setText(int2String(h)+":"+int2String(m)+":"+int2String(s));
 	}
 	
 	private String int2String(int i)
