@@ -7,6 +7,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import java.util.TimeZone;
 
 public class MainActivity extends Activity {
 	int[] millis = {27300000, 30300000, 33900000, 36900000, 40800000, 43800000, 46800000, 49500000, 52200000, 113700000};
@@ -18,7 +19,15 @@ public class MainActivity extends Activity {
 	
 	private long getMillisOfLessonsEndFromLessonNumber(int lessonnumber)
 	{
-		return getMidnightMillis() + (millis[lessonnumber - 1]) - 56000;
+		long returner = getMidnightMillis() + (millis[lessonnumber - 1]) - 56000;
+		if(TimeZone.getDefault().inDaylightTime(new java.util.Date())) {
+			returner = returner - 3600000;
+			System.out.println("Oh yeah ich bin in der Sommerzeit");
+		}
+		else {
+			System.out.println("Nope, ich bin nicht in der Sommerzeit");
+		}
+		return returner;
 	}
 		
 	private long getMidnightMillis()
